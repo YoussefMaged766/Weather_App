@@ -1,5 +1,6 @@
 package com.example.weatherapp
 
+import com.example.weatherapp.responce.baseresponce
 import com.google.gson.annotations.SerializedName
 
 data class Response(
@@ -11,19 +12,19 @@ data class Response(
 	val timezone: Int? = null,
 
 	@field:SerializedName("main")
-	val main: Main? = null,
+	val main: baseresponce.Main? = null,
 
 	@field:SerializedName("clouds")
 	val clouds: Clouds? = null,
 
 	@field:SerializedName("sys")
-	val sys: Sys? = null,
+	val sys: baseresponce.Sys? = null,
 
 	@field:SerializedName("dt")
 	val dt: Int? = null,
 
 	@field:SerializedName("coord")
-	val coord: Coord? = null,
+	val coord: baseresponce.Coord? = null,
 
 	@field:SerializedName("weather")
 	val weather: List<WeatherItem?>? = null,
@@ -72,52 +73,6 @@ data class WeatherItem(
 
 	@field:SerializedName("id")
 	val id: Int? = null
-)
+):baseresponce()
 
-data class Sys(
 
-	@field:SerializedName("country")
-	val country: String? = null,
-
-	@field:SerializedName("sunrise")
-	val sunrise: Int? = null,
-
-	@field:SerializedName("sunset")
-	val sunset: Int? = null,
-
-	@field:SerializedName("id")
-	val id: Int? = null,
-
-	@field:SerializedName("type")
-	val type: Int? = null
-)
-
-data class Coord(
-
-	@field:SerializedName("lon")
-	val lon: Double? = null,
-
-	@field:SerializedName("lat")
-	val lat: Double? = null
-)
-
-data class Main(
-
-	@field:SerializedName("temp")
-	val temp: Double? = null,
-
-	@field:SerializedName("temp_min")
-	val tempMin: Double? = null,
-
-	@field:SerializedName("humidity")
-	val humidity: Int? = null,
-
-	@field:SerializedName("pressure")
-	val pressure: Int? = null,
-
-	@field:SerializedName("feels_like")
-	val feelsLike: Double? = null,
-
-	@field:SerializedName("temp_max")
-	val tempMax: Double? = null
-)

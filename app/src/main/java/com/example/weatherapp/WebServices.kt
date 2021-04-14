@@ -7,6 +7,8 @@ import retrofit2.http.Query
 interface WebServices {
 
     @GET("weather")
-    fun getWeather(@Query("q") q:String , @Query("appid") apikey:String):Call<Response>
+    fun getWeather( @Query("appid") apikey:String,@Query("id") id:String):Call<Response>
+    @GET("weather")
+    fun getcity( @Query("appid") apikey:String , @Query("id") id:String):Call<Response>
 
 }

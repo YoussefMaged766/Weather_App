@@ -6,26 +6,59 @@
     android:layout_height="match_parent"
     >
 
-
-    <TextView
-        android:id="@+id/txtmain"
+    <LinearLayout
+        android:id="@+id/l1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20sp"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/txtdescription"
-        app:layout_constraintTop_toBottomOf="@id/txtmain"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20sp"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country Main Weather  : "
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/txtmain"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l2"
+        app:layout_constraintTop_toBottomOf="@id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country description Weather : "
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/txtdescription"
+            app:layout_constraintTop_toBottomOf="@id/txtmain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
